@@ -4,10 +4,11 @@ class ProductController < ApplicationController
   end
   
   def all
-    @products = Product.all
+    @products = Product.order("name").page(params[:page]).per(5)
   end
   
   def show
     @product = Product.find(params[:id])
   end
+
 end
