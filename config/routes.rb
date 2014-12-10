@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'all' => 'product#all'
   get 'about' => 'page#about'
   get 'contact' => 'page#contact'
+  get 'product/:id' => 'product#show', constraints: {id: /\d+/}, as: 'product' 
   
 end
