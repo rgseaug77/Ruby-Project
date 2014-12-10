@@ -3,4 +3,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   
   root to: 'product#index'
+  
+  get 'all' => 'product#all'
+  get 'about' => 'page#about'
+  get 'contact' => 'page#contact'
+  
 end
